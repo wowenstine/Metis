@@ -18,7 +18,7 @@ end
 
 class Deck
   attr_accessor :name, :cards
-  def initialize(cards)
+  def initialize(name, cards)
     @name = name
     @cards = cards
   end
@@ -32,5 +32,5 @@ end
 spanish_cards = []
 spanish_cards << Card.new({front: "gato", back: "cat"})
 spanish_cards << Card.new({front: "perro", back: "dog"})
-d = Deck.new(spanish_cards)
+d = Deck.new("spanish deck", spanish_cards)
 d.play
