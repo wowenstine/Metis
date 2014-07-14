@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+	  <% if signed_in? %>
+      Is <%= current_user.username %> shouting
+      <%= link_to "Sign out", session_path, method: :delete %>
+      ---Check out other people's shouts 
+    
+    <% else %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Sign in", new_session_path %>
+    <% end %>
+  </nav>
 
 	
 
