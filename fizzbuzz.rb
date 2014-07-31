@@ -1,20 +1,6 @@
-class FizzBuzz
-  def play
-    i=0
-    while i < 100
-        i += 1
-      if i.modulo(15).zero?
-        puts "FizzBuzz"
-      elsif i.modulo(3).zero?
-        puts "Fizz"
-      elsif i % 5 ==  0
-        puts "Buzz"
-      else 
-        puts i
-      end
-    end
-  end
+(1..100).each do |i|
+  fizzbuzz = ""
+  fizzbuzz += "Fizz" if i % 3 == 0
+  fizzbuzz += "Buzz" if i % 5 == 0
+  puts fizzbuzz.empty? ? i : fizzbuzz
 end
-
-game = FizzBuzz.new
-game.play
